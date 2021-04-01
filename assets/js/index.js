@@ -146,3 +146,21 @@ console.log('sort : ', arr14.sort(), '\nsort max to min :', arr14.sort((a, b) =>
 
 const obj = { js: 'test', jq: 'hello', css: 'world' };
 console.log('Object.keys: ', Object.keys(obj));
+
+/* Дан массив с числами. Проверьте, что в этом массиве есть указанное число.
+  Если есть - вернуть true, а если нет - вернуть false. */
+
+const incArr = [4, 2, 12, 64, 32, 23, 44, 1, 3, 23, 15, 4, 12, 27, 7, 11, 94];
+/**
+ * func checks if there is a value in the array
+ * @param {array} arr 
+ * @param {number} val 
+ * @returns {boolean} true if there is, false if not 
+ */
+function checkInclude(arr, val) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) return true;
+  }
+  return false;
+}
+console.log('Check array', checkInclude(incArr, 15));
