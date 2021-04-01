@@ -36,6 +36,20 @@ console.log(`min : ${getMin(arr)};\nmax : ${getMax(arr)}`)
 console.log(Math.min.apply(null, arr));
 console.log(Math.max.apply(null, arr));
 
+//*** ver 3 ***     
+
+Array.prototype.min = getMinV3;
+function getMinV3() {
+  let result = this[0];
+  for (let i = 1; i < this.length; i++) {
+    if (this[i] < result) result = this[i];
+  }
+  return result;
+}
+
+console.log("Version 3 min:", arr.min())
+
+
 // if (!new.target) {
 //   new Accumulator(startingValue);
 // }
