@@ -46,8 +46,10 @@ function getMinV3() {
   }
   return result;
 }
+const arr2 = [14, -22, 51, 1, -13, 0, -10];
 
-console.log("Version 3 min:", arr.min())
+console.log("Version 3 min:", arr.min());
+console.log( 'arr.min() === arr2.min() = ', arr.min() === arr2.min());
 
 
 // if (!new.target) {
