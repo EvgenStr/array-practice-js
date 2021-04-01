@@ -131,3 +131,18 @@ arr13.splice(8, 0, 'e');
 console.log('splice [1, 4, 5] = ', arr7, '\n[2, 3, 4] = ', arr11,
   `\n[1, 2, 3, 'a', 'b', 'c', 4, 5] = `, arr12,
   `\n[1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'] = `, arr13);
+
+
+/* Работа с sort
+  Для решения задач данного блока вам понадобятся следующие методы: sort.
+  Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.*/
+
+let arr14 = [3, 4, 1, 2, 7];
+console.log('sort : ', arr14.sort(), '\nsort max to min :', arr14.sort((a, b) => { return b - a }));
+
+/**Работа с Object.keys
+  Для решения задач данного блока вам понадобятся следующие методы: Object.keys.
+  Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.*/
+
+const obj = { js: 'test', jq: 'hello', css: 'world' };
+console.log('Object.keys: ', Object.keys(obj));
