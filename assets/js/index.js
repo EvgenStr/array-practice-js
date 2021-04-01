@@ -78,8 +78,19 @@ let arr4 = [1, 2, 3];
 const arr5 = [4, 5, 6];
 let concat = arr4.concat(arr5);
 console.log('concat', concat);
-//Работа с reverse
 
- let reverse = arr4.reverse();
+/*Работа с reverse
+Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1].*/
+
+let reverse = arr4.reverse();
+console.log('reverse', reverse);
+
+/* Работа с push, unshift  Дан массив [1, 2, 3]. Добавьте ему в конец элементы 4, 5, 6.
+ Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6.*/
+
+let push = arr4.push(4, 5, 6);
+let unshift = arr4.unshift(4, 5, 6);
+console.log('push and unshift', push, unshift);
+
 
 
