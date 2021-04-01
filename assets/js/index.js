@@ -11,6 +11,7 @@ const arr2 = [12, 15, 20, 25, 59, 79];
  * @returns {number}
  */
 function getMax(array) {
+  if (!Array.isArray(array)) return;
   let result = array[0];
   for (let i = 1; i < array.length; i++) {
     if (array[i] > result) result = array[i];
@@ -24,6 +25,7 @@ function getMax(array) {
  * @returns {number}
  */
 function getMin(array) {
+  if (!Array.isArray(array)) return;
   let result = array[0];
   for (let i = 1; i < array.length; i++) {
     if (array[i] < result) result = array[i];
@@ -41,6 +43,7 @@ console.log('Math.max.apply:', Math.max.apply(null, arr));
 
 Array.prototype.min = getMinV3;
 function getMinV3() {
+  if (!Array.isArray(this)) return;
   let result = this[0];
   for (let i = 1; i < this.length; i++) {
     if (this[i] < result) result = this[i];
@@ -57,6 +60,7 @@ console.log('arr.min() === arr2.min() = ', arr.min() === arr2.min());
 const arr3 = [12, 15, 20, 25, 59, 79];
 
 function getAverage(array) {
+  if (!Array.isArray(array)) return;
   let sum = null;
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
@@ -65,8 +69,17 @@ function getAverage(array) {
 }
 console.log('Average: ', getAverage(arr3));
 
+/*
+Работа с concat
+Для решения задач данного блока вам понадобятся следующие методы: concat.
+Даны два массива: [1, 2, 3] и [4, 5, 6]. Объедините их вместе.
+*/
+let arr4 = [1, 2, 3];
+const arr5 = [4, 5, 6];
+let concat = arr4.concat(arr5);
+console.log('concat', concat);
+//Работа с reverse
+
+ let reverse = arr4.reverse();
 
 
-// if (!new.target) {
-//   new Accumulator(startingValue);
-// }
