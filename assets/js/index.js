@@ -92,5 +92,10 @@ let push = arr4.push(4, 5, 6);
 let unshift = arr4.unshift(4, 5, 6);
 console.log('push and unshift', push, unshift);
 
+/*Работа с shift, pop
+Для решения задач данного блока вам понадобятся следующие методы: shift, pop.
+ Дан массив ['js', 'css', 'jq']. Выведите на экран первый элемент и удалите его.
+ Дан массив ['js', 'css', 'jq']. Выведите на экран последний элемент.*/
 
-
+let arr6 = ['js', 'css', 'jq'];
+console.log('shift -', arr6.shift(), '\npop -', arr6.pop());
