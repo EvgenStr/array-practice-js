@@ -150,7 +150,7 @@ console.log('Object.keys: ', Object.keys(obj));
 /* Дан массив с числами. Проверьте, что в этом массиве есть указанное число.
   Если есть - вернуть true, а если нет - вернуть false. */
 
-const incArr = [4, 2, 12, 64, 32, 23, 44, 1, 3, 23, 15, 4, 12, 27, 7, 11, 94];
+const incArr = [4, 2, 12, 64, 32, 23, 44, 1, 3, 23, 15, 4, 4, 12, 27, 7, 11, 94];
 /**
  * func checks if there is a value in the array
  * @param {array} arr 
@@ -158,9 +158,22 @@ const incArr = [4, 2, 12, 64, 32, 23, 44, 1, 3, 23, 15, 4, 12, 27, 7, 11, 94];
  * @returns {boolean} true if there is, false if not 
  */
 function checkInclude(arr, val) {
+  if (!Array.isArray(arr)) return null;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === val) return true;
   }
   return false;
 }
+
 console.log('Check array', checkInclude(incArr, 15));
+
+/**Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд.
+ * Если есть -  вернуть true, а если нет - вернуть false. */
+
+function checkEqual(arr) {
+  if (!Array.isArray(arr)) return null;
+  for (let i = 1; i <= arr.length; i++) {
+    if (arr[i - 1] === arr[i]) return true;
+  }
+  return false;
+}
