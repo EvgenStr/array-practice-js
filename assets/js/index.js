@@ -41,8 +41,8 @@ console.log('Math.max.apply:', Math.max.apply(null, arr));
 
 //*** ver 3 ***     
 
-Array.prototype.min = getMinV3;
-function getMinV3() {
+Array.prototype.min = getMin3;
+function getMin3() {
   if (!Array.isArray(this)) return;
   let result = this[0];
   for (let i = 1; i < this.length; i++) {
@@ -53,6 +53,17 @@ function getMinV3() {
 
 console.log("Version 3 min:", arr.min());
 console.log('arr.min() === arr2.min() = ', arr.min() === arr2.min());
+
+//*** ver 4 ***    
+
+function getMax4(array) {
+  const result = array.sort((a, b) => { return b - a });
+  return result[0];
+}
+
+console.log("Version 4 max:", getMax4(arr));
+
+
 
 /*
 Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
@@ -138,7 +149,7 @@ console.log('splice [1, 4, 5] = ', arr7, '\n[2, 3, 4] = ', arr11,
   Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.*/
 
 let arr14 = [3, 4, 1, 2, 7];
-console.log('sort : ', arr14.sort(), '\nsort max to min :', arr14.sort((a, b) => { return b - a }));
+console.log('sort : ', arr14.sort());
 
 /**Работа с Object.keys
   Для решения задач данного блока вам понадобятся следующие методы: Object.keys.
@@ -170,6 +181,12 @@ console.log('Check array', checkInclude(incArr, 15));
 /**Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд.
  * Если есть -  вернуть true, а если нет - вернуть false. */
 
+
+/**
+ * function checks if there are two equal values ​​in a row in the array
+ * @param {array} arr 
+ * @returns {boolean} true if there is, false if not 
+ */
 function checkEqual(arr) {
   if (!Array.isArray(arr)) return null;
   for (let i = 1; i <= arr.length; i++) {
@@ -177,3 +194,5 @@ function checkEqual(arr) {
   }
   return false;
 }
+
+console.log('Check equal', checkEqual(incArr));
